@@ -252,7 +252,7 @@ class PDFDrawingTools{
 			redHiglighterView.isHidden = true
 			yellowHighlighterView.isHidden = true
 			clearButtonView.isHidden = false
-			//			eraserButtonView.isHidden = true
+			eraserButtonView.isHidden = true
 			undoButtonView.isHidden = false
 			//					undoView.isHidden = false
 			//grabView.isHidden = false
@@ -268,7 +268,7 @@ class PDFDrawingTools{
 			redHiglighterView.isHidden = false
 			yellowHighlighterView.isHidden = false
 			clearButtonView.isHidden = true
-			//			eraserButtonView.isHidden = false
+			eraserButtonView.isHidden = false
 			undoButtonView.isHidden = true
 			//					undoView.isHidden=true
 			//grabView.isHidden=true

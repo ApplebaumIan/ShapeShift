@@ -72,6 +72,10 @@ extension PDFDraw: DrawingGestureRecognizerDelegate{
 		}
 		currentPage = page
 		let convertedPoint = pdfView.convert(location, to: currentPage!)
+//		if currentTool == .eraser {
+//			removeAnnotationAtPoint(point: convertedPoint, page: page)
+//			return
+//		}
 		path = UIBezierPath()
 		path?.move(to: convertedPoint)
 	}
@@ -184,12 +188,15 @@ extension PDFDraw: DrawingGestureRecognizerDelegate{
 		return annotation
 	}
 	private func removeAnnotationAtPoint(point: CGPoint, page: PDFPage) {
-		if let selectedAnnotation = page.annotationWithHitTest(at: point) {
-			undoManager.registerUndo(withTarget: self){target in
-				page.addAnnotation(selectedAnnotation)
+		DispatchQueue.main.async {
+			if let selectedAnnotation = page.annotationWithHitTest(at: point) {
+				self.undoManager.registerUndo(withTarget: self){target in
+					page.addAnnotation(selectedAnnotation)
+				}
+				selectedAnnotation.page?.removeAnnotation(selectedAnnotation)
 			}
-			selectedAnnotation.page?.removeAnnotation(selectedAnnotation)
 		}
+		
 	}
 	private func clear(onDocument: PDFDocument) {/*actually clears the annotations off of the pdf*/
 		undoManager.beginUndoGrouping()/*Groups all of the cleared annotations together so when you undo you get them all back*/

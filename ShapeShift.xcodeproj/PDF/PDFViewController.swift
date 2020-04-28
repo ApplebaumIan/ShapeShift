@@ -75,7 +75,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 				//var brochures = brochure.getAll()
 				//let selectorGuide = brochure.getSelectorGuide()//brochures[13]//get the 36th brochure... btw this wont work unless all of the brochures are in the root of the documents directory... it's going to show up blank other wise. ~Ian
 				view.addSubview(pdfView)
-				view.backgroundColor = .white
+		view.backgroundColor = .systemBackground
 				pdfViewConstraints()//constraints for pdfView
 	}
 	
