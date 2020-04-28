@@ -93,6 +93,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		setUpMarkupTools()
 		let toolBar = UIToolbar()
 		let barItem = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(close))
+		barItem.tintColor = .systemYellow
 		toolBar.setItems([barItem], animated: true)
 		view.addSubview(toolBar)
 		toolBar.translatesAutoresizingMaskIntoConstraints = false
