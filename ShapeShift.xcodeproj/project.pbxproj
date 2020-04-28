@@ -16,6 +16,36 @@
 		67D5DEE12457DB2F00759180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DEDF2457DB2F00759180 /* LaunchScreen.storyboard */; };
 		67D5DEEC2457DB2F00759180 /* ShapeShiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DEEB2457DB2F00759180 /* ShapeShiftTests.swift */; };
 		67D5DEF72457DB2F00759180 /* ShapeShiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DEF62457DB2F00759180 /* ShapeShiftUITests.swift */; };
+		67D5DF382457E33900759180 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF062457E33800759180 /* Preview Assets.xcassets */; };
+		67D5DF762457E4A500759180 /* MainPDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF5E2457E4A500759180 /* MainPDFView.swift */; };
+		67D5DF772457E4A500759180 /* screenshotView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF602457E4A500759180 /* screenshotView.storyboard */; };
+		67D5DF782457E4A500759180 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF612457E4A500759180 /* PDFViewController.swift */; };
+		67D5DF792457E4A500759180 /* blank.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF622457E4A500759180 /* blank.pdf */; };
+		67D5DF7A2457E4A500759180 /* UIPrintPageRenderer-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF642457E4A500759180 /* UIPrintPageRenderer-Extensions.swift */; };
+		67D5DF7B2457E4A500759180 /* HTMLPDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF652457E4A500759180 /* HTMLPDFRenderer.swift */; };
+		67D5DF7C2457E4A500759180 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF672457E4A500759180 /* SwiftyTimer.swift */; };
+		67D5DF7D2457E4A500759180 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF682457E4A500759180 /* Log.swift */; };
+		67D5DF7E2457E4A500759180 /* FileManager-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF692457E4A500759180 /* FileManager-Extensions.swift */; };
+		67D5DF7F2457E4A500759180 /* PDFPaperSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF6A2457E4A500759180 /* PDFPaperSize.swift */; };
+		67D5DF802457E4A500759180 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF6C2457E4A500759180 /* APIHelper.swift */; };
+		67D5DF812457E4A500759180 /* HandwritingRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF6D2457E4A500759180 /* HandwritingRecognition.swift */; };
+		67D5DF822457E4A500759180 /* PDFAnnotationWithPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF6E2457E4A500759180 /* PDFAnnotationWithPath.swift */; };
+		67D5DF832457E4A500759180 /* DrawingRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF6F2457E4A500759180 /* DrawingRecognizer.swift */; };
+		67D5DF842457E4A500759180 /* UIBezierPath+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF712457E4A500759180 /* UIBezierPath+.swift */; };
+		67D5DF852457E4A500759180 /* PDFDrawingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF732457E4A500759180 /* PDFDrawingTools.swift */; };
+		67D5DF862457E4A500759180 /* PDFDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF742457E4A500759180 /* PDFDraw.swift */; };
+		67D5DF872457E4A500759180 /* DrawingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF752457E4A500759180 /* DrawingAnnotation.swift */; };
+		67D5DF962457E4F900759180 /* ScreenshotSharerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF8A2457E4F900759180 /* ScreenshotSharerViewController.swift */; };
+		67D5DF972457E4F900759180 /* ScreenshotSharerMinimal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF8D2457E4F900759180 /* ScreenshotSharerMinimal.xib */; };
+		67D5DF982457E4F900759180 /* ScreenshotSharerMinimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF8E2457E4F900759180 /* ScreenshotSharerMinimal.swift */; };
+		67D5DF992457E4F900759180 /* ic_dismiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF902457E4F900759180 /* ic_dismiss.png */; };
+		67D5DF9A2457E4F900759180 /* ic_dismiss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF912457E4F900759180 /* ic_dismiss@2x.png */; };
+		67D5DF9B2457E4F900759180 /* ic_dismiss@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D5DF922457E4F900759180 /* ic_dismiss@3x.png */; };
+		67D5DF9C2457E4F900759180 /* ScreenshotSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF932457E4F900759180 /* ScreenshotSharer.swift */; };
+		67D5DF9D2457E4F900759180 /* ScreenshotSharerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF942457E4F900759180 /* ScreenshotSharerUtility.swift */; };
+		67D5DF9E2457E4F900759180 /* ScreenshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF952457E4F900759180 /* ScreenshotViewController.swift */; };
+		67D5DFA02457E8CA00759180 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF9F2457E8CA00759180 /* Extensions.swift */; };
+		67D5DFA22457E8F800759180 /* UserInterfaceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DFA12457E8F700759180 /* UserInterfaceControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +81,36 @@
 		67D5DEF22457DB2F00759180 /* ShapeShiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeShiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67D5DEF62457DB2F00759180 /* ShapeShiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeShiftUITests.swift; sourceTree = "<group>"; };
 		67D5DEF82457DB2F00759180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67D5DF062457E33800759180 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67D5DF5E2457E4A500759180 /* MainPDFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPDFView.swift; sourceTree = "<group>"; };
+		67D5DF602457E4A500759180 /* screenshotView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = screenshotView.storyboard; sourceTree = "<group>"; };
+		67D5DF612457E4A500759180 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		67D5DF622457E4A500759180 /* blank.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = blank.pdf; sourceTree = "<group>"; };
+		67D5DF642457E4A500759180 /* UIPrintPageRenderer-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPrintPageRenderer-Extensions.swift"; sourceTree = "<group>"; };
+		67D5DF652457E4A500759180 /* HTMLPDFRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLPDFRenderer.swift; sourceTree = "<group>"; };
+		67D5DF672457E4A500759180 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		67D5DF682457E4A500759180 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		67D5DF692457E4A500759180 /* FileManager-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager-Extensions.swift"; sourceTree = "<group>"; };
+		67D5DF6A2457E4A500759180 /* PDFPaperSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFPaperSize.swift; sourceTree = "<group>"; };
+		67D5DF6C2457E4A500759180 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		67D5DF6D2457E4A500759180 /* HandwritingRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingRecognition.swift; sourceTree = "<group>"; };
+		67D5DF6E2457E4A500759180 /* PDFAnnotationWithPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFAnnotationWithPath.swift; sourceTree = "<group>"; };
+		67D5DF6F2457E4A500759180 /* DrawingRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingRecognizer.swift; sourceTree = "<group>"; };
+		67D5DF712457E4A500759180 /* UIBezierPath+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+.swift"; sourceTree = "<group>"; };
+		67D5DF732457E4A500759180 /* PDFDrawingTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFDrawingTools.swift; sourceTree = "<group>"; };
+		67D5DF742457E4A500759180 /* PDFDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFDraw.swift; sourceTree = "<group>"; };
+		67D5DF752457E4A500759180 /* DrawingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingAnnotation.swift; sourceTree = "<group>"; };
+		67D5DF8A2457E4F900759180 /* ScreenshotSharerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerViewController.swift; sourceTree = "<group>"; };
+		67D5DF8D2457E4F900759180 /* ScreenshotSharerMinimal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenshotSharerMinimal.xib; sourceTree = "<group>"; };
+		67D5DF8E2457E4F900759180 /* ScreenshotSharerMinimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerMinimal.swift; sourceTree = "<group>"; };
+		67D5DF902457E4F900759180 /* ic_dismiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dismiss.png; sourceTree = "<group>"; };
+		67D5DF912457E4F900759180 /* ic_dismiss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@2x.png"; sourceTree = "<group>"; };
+		67D5DF922457E4F900759180 /* ic_dismiss@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dismiss@3x.png"; sourceTree = "<group>"; };
+		67D5DF932457E4F900759180 /* ScreenshotSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharer.swift; sourceTree = "<group>"; };
+		67D5DF942457E4F900759180 /* ScreenshotSharerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotSharerUtility.swift; sourceTree = "<group>"; };
+		67D5DF952457E4F900759180 /* ScreenshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotViewController.swift; sourceTree = "<group>"; };
+		67D5DF9F2457E8CA00759180 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../Documents/github/ShapeShifter/ShapeShifter/Extensions.swift; sourceTree = "<group>"; };
+		67D5DFA12457E8F700759180 /* UserInterfaceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInterfaceControl.swift; path = ../../Documents/github/ShapeShifter/ShapeShifter/UserInterfaceControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +141,10 @@
 		67D5DEC62457DB2B00759180 = {
 			isa = PBXGroup;
 			children = (
+				67D5DF9F2457E8CA00759180 /* Extensions.swift */,
+				67D5DFA12457E8F700759180 /* UserInterfaceControl.swift */,
+				67D5DF5D2457E4A500759180 /* PDF */,
+				67D5DF052457E33800759180 /* Preview Content */,
 				67D5DED12457DB2B00759180 /* ShapeShift */,
 				67D5DEEA2457DB2F00759180 /* ShapeShiftTests */,
 				67D5DEF52457DB2F00759180 /* ShapeShiftUITests */,
@@ -129,6 +193,137 @@
 				67D5DEF82457DB2F00759180 /* Info.plist */,
 			);
 			path = ShapeShiftUITests;
+			sourceTree = "<group>";
+		};
+		67D5DF052457E33800759180 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF062457E33800759180 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67D5DF5D2457E4A500759180 /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF5E2457E4A500759180 /* MainPDFView.swift */,
+				67D5DF5F2457E4A500759180 /* Screenshot */,
+				67D5DF612457E4A500759180 /* PDFViewController.swift */,
+				67D5DF882457E4F900759180 /* Screenshots */,
+				67D5DF622457E4A500759180 /* blank.pdf */,
+				67D5DF632457E4A500759180 /* PDF Creation */,
+				67D5DF6B2457E4A500759180 /* ApplePencil */,
+			);
+			name = PDF;
+			path = ShapeShift.xcodeproj/PDF;
+			sourceTree = "<group>";
+		};
+		67D5DF5F2457E4A500759180 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF602457E4A500759180 /* screenshotView.storyboard */,
+			);
+			path = Screenshot;
+			sourceTree = "<group>";
+		};
+		67D5DF632457E4A500759180 /* PDF Creation */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF642457E4A500759180 /* UIPrintPageRenderer-Extensions.swift */,
+				67D5DF652457E4A500759180 /* HTMLPDFRenderer.swift */,
+				67D5DF662457E4A500759180 /* Dependencies */,
+				67D5DF6A2457E4A500759180 /* PDFPaperSize.swift */,
+			);
+			path = "PDF Creation";
+			sourceTree = "<group>";
+		};
+		67D5DF662457E4A500759180 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF672457E4A500759180 /* SwiftyTimer.swift */,
+				67D5DF682457E4A500759180 /* Log.swift */,
+				67D5DF692457E4A500759180 /* FileManager-Extensions.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		67D5DF6B2457E4A500759180 /* ApplePencil */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF6C2457E4A500759180 /* APIHelper.swift */,
+				67D5DF6D2457E4A500759180 /* HandwritingRecognition.swift */,
+				67D5DF6E2457E4A500759180 /* PDFAnnotationWithPath.swift */,
+				67D5DF6F2457E4A500759180 /* DrawingRecognizer.swift */,
+				67D5DF702457E4A500759180 /* SideBar VCs */,
+				67D5DF712457E4A500759180 /* UIBezierPath+.swift */,
+				67D5DF722457E4A500759180 /* Legacy */,
+				67D5DF732457E4A500759180 /* PDFDrawingTools.swift */,
+				67D5DF742457E4A500759180 /* PDFDraw.swift */,
+				67D5DF752457E4A500759180 /* DrawingAnnotation.swift */,
+			);
+			path = ApplePencil;
+			sourceTree = "<group>";
+		};
+		67D5DF702457E4A500759180 /* SideBar VCs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "SideBar VCs";
+			sourceTree = "<group>";
+		};
+		67D5DF722457E4A500759180 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		67D5DF882457E4F900759180 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF892457E4F900759180 /* Classes */,
+				67D5DF952457E4F900759180 /* ScreenshotViewController.swift */,
+			);
+			path = Screenshots;
+			sourceTree = SOURCE_ROOT;
+		};
+		67D5DF892457E4F900759180 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF8A2457E4F900759180 /* ScreenshotSharerViewController.swift */,
+				67D5DF8B2457E4F900759180 /* Skins */,
+				67D5DF932457E4F900759180 /* ScreenshotSharer.swift */,
+				67D5DF942457E4F900759180 /* ScreenshotSharerUtility.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		67D5DF8B2457E4F900759180 /* Skins */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF8C2457E4F900759180 /* Minimal */,
+			);
+			path = Skins;
+			sourceTree = "<group>";
+		};
+		67D5DF8C2457E4F900759180 /* Minimal */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF8D2457E4F900759180 /* ScreenshotSharerMinimal.xib */,
+				67D5DF8E2457E4F900759180 /* ScreenshotSharerMinimal.swift */,
+				67D5DF8F2457E4F900759180 /* Assets */,
+			);
+			path = Minimal;
+			sourceTree = "<group>";
+		};
+		67D5DF8F2457E4F900759180 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				67D5DF902457E4F900759180 /* ic_dismiss.png */,
+				67D5DF912457E4F900759180 /* ic_dismiss@2x.png */,
+				67D5DF922457E4F900759180 /* ic_dismiss@3x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +430,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D5DF9B2457E4F900759180 /* ic_dismiss@3x.png in Resources */,
+				67D5DF992457E4F900759180 /* ic_dismiss.png in Resources */,
+				67D5DF382457E33900759180 /* Preview Assets.xcassets in Resources */,
+				67D5DF972457E4F900759180 /* ScreenshotSharerMinimal.xib in Resources */,
 				67D5DEE12457DB2F00759180 /* LaunchScreen.storyboard in Resources */,
 				67D5DEDE2457DB2F00759180 /* Assets.xcassets in Resources */,
+				67D5DF772457E4A500759180 /* screenshotView.storyboard in Resources */,
 				67D5DEDC2457DB2B00759180 /* Main.storyboard in Resources */,
+				67D5DF9A2457E4F900759180 /* ic_dismiss@2x.png in Resources */,
+				67D5DF792457E4A500759180 /* blank.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +464,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D5DF7C2457E4A500759180 /* SwiftyTimer.swift in Sources */,
+				67D5DF872457E4A500759180 /* DrawingAnnotation.swift in Sources */,
+				67D5DF9C2457E4F900759180 /* ScreenshotSharer.swift in Sources */,
 				67D5DED92457DB2B00759180 /* Document.swift in Sources */,
+				67D5DF862457E4A500759180 /* PDFDraw.swift in Sources */,
+				67D5DF7E2457E4A500759180 /* FileManager-Extensions.swift in Sources */,
+				67D5DF812457E4A500759180 /* HandwritingRecognition.swift in Sources */,
+				67D5DF7D2457E4A500759180 /* Log.swift in Sources */,
 				67D5DED52457DB2B00759180 /* DocumentBrowserViewController.swift in Sources */,
+				67D5DF832457E4A500759180 /* DrawingRecognizer.swift in Sources */,
+				67D5DF762457E4A500759180 /* MainPDFView.swift in Sources */,
+				67D5DF842457E4A500759180 /* UIBezierPath+.swift in Sources */,
+				67D5DF7A2457E4A500759180 /* UIPrintPageRenderer-Extensions.swift in Sources */,
+				67D5DF782457E4A500759180 /* PDFViewController.swift in Sources */,
+				67D5DF852457E4A500759180 /* PDFDrawingTools.swift in Sources */,
+				67D5DF9D2457E4F900759180 /* ScreenshotSharerUtility.swift in Sources */,
+				67D5DF982457E4F900759180 /* ScreenshotSharerMinimal.swift in Sources */,
 				67D5DED72457DB2B00759180 /* DocumentView.swift in Sources */,
+				67D5DF962457E4F900759180 /* ScreenshotSharerViewController.swift in Sources */,
+				67D5DFA22457E8F800759180 /* UserInterfaceControl.swift in Sources */,
+				67D5DF7B2457E4A500759180 /* HTMLPDFRenderer.swift in Sources */,
+				67D5DF802457E4A500759180 /* APIHelper.swift in Sources */,
+				67D5DFA02457E8CA00759180 /* Extensions.swift in Sources */,
+				67D5DF822457E4A500759180 /* PDFAnnotationWithPath.swift in Sources */,
+				67D5DF7F2457E4A500759180 /* PDFPaperSize.swift in Sources */,
+				67D5DF9E2457E4F900759180 /* ScreenshotViewController.swift in Sources */,
 				67D5DED32457DB2B00759180 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

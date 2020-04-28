@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:PDF"
+      name = "PDF">
+      <FileRef
+         location = "group:MainPDFView.swift">
+      </FileRef>
+      <Group
+         location = "group:Screenshot"
+         name = "Screenshot">
+         <FileRef
+            location = "group:screenshotView.storyboard">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:PDFViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:blank.pdf">
+      </FileRef>
+      <Group
+         location = "group:PDF Creation"
+         name = "PDF Creation">
+         <FileRef
+            location = "group:UIPrintPageRenderer-Extensions.swift">
+         </FileRef>
+         <FileRef
+            location = "group:HTMLPDFRenderer.swift">
+         </FileRef>
+         <Group
+            location = "group:Dependencies"
+            name = "Dependencies">
+            <FileRef
+               location = "group:SwiftyTimer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Log.swift">
+            </FileRef>
+            <FileRef
+               location = "group:FileManager-Extensions.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:PDFPaperSize.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:ApplePencil"
+         name = "ApplePencil">
+         <FileRef
+            location = "group:APIHelper.swift">
+         </FileRef>
+         <FileRef
+            location = "group:HandwritingRecognition.swift">
+         </FileRef>
+         <FileRef
+            location = "group:PDFAnnotationWithPath.swift">
+         </FileRef>
+         <FileRef
+            location = "group:DrawingRecognizer.swift">
+         </FileRef>
+         <Group
+            location = "group:SideBar VCs"
+            name = "SideBar VCs">
+         </Group>
+         <FileRef
+            location = "group:UIBezierPath+.swift">
+         </FileRef>
+         <Group
+            location = "group:Legacy"
+            name = "Legacy">
+         </Group>
+         <FileRef
+            location = "group:PDFDrawingTools.swift">
+         </FileRef>
+         <FileRef
+            location = "group:PDFDraw.swift">
+         </FileRef>
+         <FileRef
+            location = "group:DrawingAnnotation.swift">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "self:ShapeShift.xcodeproj">
    </FileRef>

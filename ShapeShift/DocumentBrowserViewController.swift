@@ -69,11 +69,12 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         document.open(completionHandler: { success in
             if success {
                 // Display the content of the document:
-                let view = DocumentView(document: document, dismiss: {
-                    self.closeDocument(document)
-                })
-
-                let documentViewController = UIHostingController(rootView: view)
+//                let view = DocumentView(document: document, dismiss: {
+//                    self.closeDocument(document)
+//                })
+				
+                let documentViewController = PDFViewController(pdf: document)
+				documentViewController.modalPresentationStyle = .fullScreen
                 self.present(documentViewController, animated: true, completion: nil)
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
@@ -88,3 +89,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     }
 }
 
+
+struct DocumentBrowserViewController_Previews: PreviewProvider {
+	static var previews: some View {
+		/*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+	}
+}
