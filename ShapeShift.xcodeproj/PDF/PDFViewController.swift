@@ -13,6 +13,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 	let pdfView = MainPDFView()
 	var pdf : Document?
 	var markupButtons = UIStackView()
+	let closeButton = UIButton()
 	let sssharer = ScreenshotSharer()
 	private let pdfDrawing = PDFDraw()
 	private let pdfDrawingToolsDel = PDFDrawingTools()
@@ -26,6 +27,16 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	func closeButtonSetup() {
+		view.addSubview(closeButton)
+		closeButton.translatesAutoresizingMaskIntoConstraints = false
+		closeButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+		closeButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+		closeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20).isActive = true
+		closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+		closeButton.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
+		view.bringSubviewToFront(closeButton)
 	}
 	fileprivate func setUpMarkupTools() {
 		pdfDrawingToolsDel.pdfDrawDelagate = pdfDrawing
@@ -80,7 +91,14 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 //    super.viewDidLoad()
 		PDFSetUp()
 		setUpMarkupTools()
-		
+		let toolBar = UIToolbar()
+		let barItem = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(close))
+		toolBar.setItems([barItem], animated: true)
+		view.addSubview(toolBar)
+		toolBar.translatesAutoresizingMaskIntoConstraints = false
+		toolBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+		toolBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+		toolBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 		sssharer.registerScreenCapturer(cropStatusBar: true, cropRect: CGRect.zero, sharerViewController: customSharer, captureBlock: { (image, customScreenshotSharerViewController) in
 					 }) { (isSuccess) in
 					
@@ -96,16 +114,22 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 //		buttonHolder.backgroundColor = .green
 		buttonHolder.backgroundColor = .clear
 		 buttonHolder.addSubview(markupButtons)
+//		closeButtonSetup()
 
     }
-
+	@objc func close(){
+		if let pdf = pdf {
+			pdfView.document?.write(to: pdf.fileURL)
+		}
+		self.dismiss(animated: true, completion: nil)
+	}
 	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 		   pdfView.autoScales = true // This call is required to fix PDF document scale, seems to be bug inside PDFKit
 	   }
 	let imageView = UIImageView()
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		pdfDrawing.setup()
+//		pdfDrawing.setup()
 		view.addSubview(imageView)
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true

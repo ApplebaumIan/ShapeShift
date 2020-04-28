@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
+class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate,UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +76,8 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
                 let documentViewController = PDFViewController(pdf: document)
 				documentViewController.modalPresentationStyle = .fullScreen
                 self.present(documentViewController, animated: true, completion: nil)
+//				self.navigationController?.pushViewController(documentViewController, animated: true)
+				
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
             }
