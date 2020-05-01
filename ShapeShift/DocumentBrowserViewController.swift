@@ -96,7 +96,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         // Make sure the importHandler is always called, even if the user cancels the creation request.
 		newDocumentURL = Bundle.main.url(forResource: "blank", withExtension: "pdf")
         if newDocumentURL != nil {
-            importHandler(newDocumentURL, .move)
+			importHandler(newDocumentURL, .copy)
 			
         } else {
             importHandler(nil, .none)

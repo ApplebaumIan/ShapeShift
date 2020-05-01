@@ -76,6 +76,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 				view.addSubview(pdfView)
 		view.backgroundColor = .systemBackground
 				pdfViewConstraints()//constraints for pdfView
+		imageView.isHidden = true
 	}
 	
 
@@ -93,9 +94,16 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		setUpMarkupTools()
 		let toolBar = UIToolbar()
 		let barItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(save))
+		let label = UILabel()
+		label.text = pdf?.fileURL.lastPathComponent
+//		label.center = CGPoint(x: CGRectGetMidX(view.frame), y: view.frame.height)
+//		label.textAlignment = NSTextAlignment.Center
 
+		let toolbarTitle = UIBarButtonItem(customView: label)
+//		titleItem.title = self.pdf?.fileURL.lastPathComponent
 		barItem.tintColor = .systemYellow
-		toolBar.setItems([barItem], animated: true)
+		let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+		toolBar.setItems([flexible,toolbarTitle,flexible,barItem], animated: true)
 //		navigationItem.rightBarButtonItem = barItem
 		view.addSubview(toolBar)
 		toolBar.translatesAutoresizingMaskIntoConstraints = false
@@ -157,6 +165,6 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 			topCover.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
 			topCover.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
 			let backgroundColoer : UIColor = .tertiarySystemBackground
-			topCover.backgroundColor = backgroundColoer.withAlphaComponent(0.50)
+//			topCover.backgroundColor = backgroundColoer.withAlphaComponent(0.50)
 		}
 }

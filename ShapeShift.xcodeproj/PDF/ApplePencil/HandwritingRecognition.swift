@@ -106,7 +106,7 @@ extension PDFDraw{
 		let swiftOCRInstance = SwiftOCR()
 		
 		swiftOCRInstance.recognize(ocrImage) { recognizedString in
-			print("BUCK ME \(recognizedString)")
+			print("\(recognizedString)")
 		}
     }
 	public func retrieveTextOnImage(_ image: UIImage, completion: @escaping (String?, NSError?) -> ()) {
