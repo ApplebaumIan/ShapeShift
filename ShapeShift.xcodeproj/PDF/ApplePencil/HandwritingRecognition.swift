@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import PDFKit
+import SwiftOCR
 extension PDFDraw{
 	public func setup () {
         resetDoodleRect()
@@ -16,7 +17,7 @@ extension PDFDraw{
         lastTouchTimestamp = 0
         
         if #available(iOS 10.0, *) {
-            trackTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: {
+            trackTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: {
                 timer in
                 
                 let now = Date().timeIntervalSince1970
@@ -41,7 +42,7 @@ extension PDFDraw{
 		   context = UIGraphicsGetCurrentContext()
 	   }
 	func drawDoodlingRect(context: CGContext?) {
-        let inset = 5
+        let inset = 10
         
 //        markerColor.setStroke()
         context!.setLineWidth(1.0)
@@ -72,36 +73,41 @@ extension PDFDraw{
         
 		let ocrImage = imageView!.image!.crop(rect: ocrImageRect!)
         
-        manager.retrieveTextOnImage(ocrImage) {
-            operationURL, error in
-            
-            if #available(iOS 10.0, *) {
-                
-                guard let _ = operationURL else {
-                    print("Seems like the network call failed - did you enter the Computer Vision Key in CognitiveServices.swift in line 69? :)")
-                    return
-                }
-                
-                let when = DispatchTime.now() + 2
-                DispatchQueue.main.asyncAfter(deadline: when) {
-                    
-                    manager.retrieveResultForOcrOperation(operationURL!, completion: {
-                        results, error -> (Void) in
-                        
-                        if let theResult = results {
-                            var ocrText = ""
-                            for result in theResult {
-                                ocrText = "\(ocrText) \(result)"
-                            }
-                            self.addLabelForOCR(text: ocrText)
-                        } else {
-                            self.addLabelForOCR(text: "No text for writing")
-                        }
-                        
-                    })
-                }
-            }
-        }
+//        manager.retrieveTextOnImage(ocrImage) {
+//            operationURL, error in
+//
+//            if #available(iOS 10.0, *) {
+//
+//                guard let _ = operationURL else {
+//                    print("Seems like the network call failed - did you enter the Computer Vision Key in CognitiveServices.swift in line 69? :)")
+//                    return
+//                }
+//
+//                let when = DispatchTime.now() + 2
+//                DispatchQueue.main.asyncAfter(deadline: when) {
+//
+//                    manager.retrieveResultForOcrOperation(operationURL!, completion: {
+//                        results, error -> (Void) in
+//
+//                        if let theResult = results {
+//                            var ocrText = ""
+//                            for result in theResult {
+//                                ocrText = "\(ocrText) \(result)"
+//                            }
+//                            self.addLabelForOCR(text: ocrText)
+//                        } else {
+//                            self.addLabelForOCR(text: "No text for writing")
+//                        }
+//
+//                    })
+//                }
+//            }
+//        }
+		let swiftOCRInstance = SwiftOCR()
+		
+		swiftOCRInstance.recognize(ocrImage) { recognizedString in
+			print("BUCK ME \(recognizedString)")
+		}
     }
 	public func retrieveTextOnImage(_ image: UIImage, completion: @escaping (String?, NSError?) -> ()) {
         

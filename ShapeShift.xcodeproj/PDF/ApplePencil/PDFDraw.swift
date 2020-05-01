@@ -8,6 +8,7 @@
 /*This class actually handles the drawings on a PDF.*/
 import Foundation
 import PDFKit
+import SwiftOCR
 class PDFDraw {
 	weak var pdfView: PDFView!
 	private var path: UIBezierPath?
@@ -85,7 +86,7 @@ extension PDFDraw: DrawingGestureRecognizerDelegate{
 			return
 		}
 		lastTouchTimestamp = Date().timeIntervalSince1970
-//		imageView?.image?.draw(in: pdfView.bounds)
+		imageView?.image?.draw(in: pdfView.bounds)
 		let convertedPoint = pdfView.convert(location, to: page)
 		//eraser
 		if currentTool == .eraser {
@@ -124,9 +125,9 @@ extension PDFDraw: DrawingGestureRecognizerDelegate{
 		createFinalAnnotation(path: path!, page: page)
 		currentAnnotation = nil
 		let ss = ScreenshotSharer()
-//		imageView?.image = ss.takeImageOf(view: pdfView)
-//		drawDoodlingRect(context: context)
-//		resetDoodleRect()
+		imageView?.image = ss.takeImageOf(view: pdfView)
+		drawDoodlingRect(context: context)
+		resetDoodleRect()
 	}
 	private func createFinalAnnotation(path: UIBezierPath, page: PDFPage) -> PDFAnnotation {
 		let border = PDFBorder()

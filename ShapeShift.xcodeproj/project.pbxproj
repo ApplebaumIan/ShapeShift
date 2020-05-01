@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52BC892C2AB0C5312B272DF2 /* Pods_ShapeShift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7DA3B45160F9556B4DF413 /* Pods_ShapeShift.framework */; };
 		67D5DED32457DB2B00759180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DED22457DB2B00759180 /* AppDelegate.swift */; };
 		67D5DED52457DB2B00759180 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DED42457DB2B00759180 /* DocumentBrowserViewController.swift */; };
 		67D5DED72457DB2B00759180 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DED62457DB2B00759180 /* DocumentView.swift */; };
@@ -46,6 +47,8 @@
 		67D5DF9E2457E4F900759180 /* ScreenshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF952457E4F900759180 /* ScreenshotViewController.swift */; };
 		67D5DFA02457E8CA00759180 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DF9F2457E8CA00759180 /* Extensions.swift */; };
 		67D5DFA22457E8F800759180 /* UserInterfaceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5DFA12457E8F700759180 /* UserInterfaceControl.swift */; };
+		6B68C21E0C6060062909C10C /* Pods_ShapeShiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECB0D7809B53ECC5959CF00 /* Pods_ShapeShiftTests.framework */; };
+		F3F3C41A9F75586D5ADF5A4F /* Pods_ShapeShift_ShapeShiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5D772686952C7B0FCBDC0E /* Pods_ShapeShift_ShapeShiftUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CEA92062F26F01687AC14D7 /* Pods-ShapeShiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeShiftTests.release.xcconfig"; path = "Target Support Files/Pods-ShapeShiftTests/Pods-ShapeShiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		401D6F4A1FEEA3D52D92F527 /* Pods-ShapeShiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeShiftTests.debug.xcconfig"; path = "Target Support Files/Pods-ShapeShiftTests/Pods-ShapeShiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E10902AEDFBE7CEFAB0C707 /* Pods-ShapeShift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeShift.release.xcconfig"; path = "Target Support Files/Pods-ShapeShift/Pods-ShapeShift.release.xcconfig"; sourceTree = "<group>"; };
 		67D5DECF2457DB2B00759180 /* ShapeShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67D5DED22457DB2B00759180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67D5DED42457DB2B00759180 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,12 @@
 		67D5DF952457E4F900759180 /* ScreenshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotViewController.swift; sourceTree = "<group>"; };
 		67D5DF9F2457E8CA00759180 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../Documents/github/ShapeShifter/ShapeShifter/Extensions.swift; sourceTree = "<group>"; };
 		67D5DFA12457E8F700759180 /* UserInterfaceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInterfaceControl.swift; path = ../../Documents/github/ShapeShifter/ShapeShifter/UserInterfaceControl.swift; sourceTree = "<group>"; };
+		7F5D772686952C7B0FCBDC0E /* Pods_ShapeShift_ShapeShiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeShift_ShapeShiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B7660B878A8D3E3BE1B44A /* Pods-ShapeShift-ShapeShiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeShift-ShapeShiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShapeShift-ShapeShiftUITests/Pods-ShapeShift-ShapeShiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8ECB0D7809B53ECC5959CF00 /* Pods_ShapeShiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeShiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7DA3B45160F9556B4DF413 /* Pods_ShapeShift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeShift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD5FF345AC3FFE544E1B12B /* Pods-ShapeShift-ShapeShiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeShift-ShapeShiftUITests.release.xcconfig"; path = "Target Support Files/Pods-ShapeShift-ShapeShiftUITests/Pods-ShapeShift-ShapeShiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F5BD57FE6BDA846AC14BD44A /* Pods-ShapeShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeShift.debug.xcconfig"; path = "Target Support Files/Pods-ShapeShift/Pods-ShapeShift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BC892C2AB0C5312B272DF2 /* Pods_ShapeShift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B68C21E0C6060062909C10C /* Pods_ShapeShiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F3C41A9F75586D5ADF5A4F /* Pods_ShapeShift_ShapeShiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +164,8 @@
 				67D5DEEA2457DB2F00759180 /* ShapeShiftTests */,
 				67D5DEF52457DB2F00759180 /* ShapeShiftUITests */,
 				67D5DED02457DB2B00759180 /* Products */,
+				7ECD3C58BA2113DD5A154E02 /* Pods */,
+				713B968E0B6A6F136448D303 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,28 +271,12 @@
 				67D5DF6D2457E4A500759180 /* HandwritingRecognition.swift */,
 				67D5DF6E2457E4A500759180 /* PDFAnnotationWithPath.swift */,
 				67D5DF6F2457E4A500759180 /* DrawingRecognizer.swift */,
-				67D5DF702457E4A500759180 /* SideBar VCs */,
 				67D5DF712457E4A500759180 /* UIBezierPath+.swift */,
-				67D5DF722457E4A500759180 /* Legacy */,
 				67D5DF732457E4A500759180 /* PDFDrawingTools.swift */,
 				67D5DF742457E4A500759180 /* PDFDraw.swift */,
 				67D5DF752457E4A500759180 /* DrawingAnnotation.swift */,
 			);
 			path = ApplePencil;
-			sourceTree = "<group>";
-		};
-		67D5DF702457E4A500759180 /* SideBar VCs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "SideBar VCs";
-			sourceTree = "<group>";
-		};
-		67D5DF722457E4A500759180 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Legacy;
 			sourceTree = "<group>";
 		};
 		67D5DF882457E4F900759180 /* Screenshots */ = {
@@ -326,6 +327,29 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		713B968E0B6A6F136448D303 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED7DA3B45160F9556B4DF413 /* Pods_ShapeShift.framework */,
+				7F5D772686952C7B0FCBDC0E /* Pods_ShapeShift_ShapeShiftUITests.framework */,
+				8ECB0D7809B53ECC5959CF00 /* Pods_ShapeShiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ECD3C58BA2113DD5A154E02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5BD57FE6BDA846AC14BD44A /* Pods-ShapeShift.debug.xcconfig */,
+				4E10902AEDFBE7CEFAB0C707 /* Pods-ShapeShift.release.xcconfig */,
+				80B7660B878A8D3E3BE1B44A /* Pods-ShapeShift-ShapeShiftUITests.debug.xcconfig */,
+				EFD5FF345AC3FFE544E1B12B /* Pods-ShapeShift-ShapeShiftUITests.release.xcconfig */,
+				401D6F4A1FEEA3D52D92F527 /* Pods-ShapeShiftTests.debug.xcconfig */,
+				3CEA92062F26F01687AC14D7 /* Pods-ShapeShiftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,9 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67D5DEFB2457DB2F00759180 /* Build configuration list for PBXNativeTarget "ShapeShift" */;
 			buildPhases = (
+				94D9F830C7911547C327A481 /* [CP] Check Pods Manifest.lock */,
 				67D5DECB2457DB2B00759180 /* Sources */,
 				67D5DECC2457DB2B00759180 /* Frameworks */,
 				67D5DECD2457DB2B00759180 /* Resources */,
+				B29AAB1501CF9DAEB4993FA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +376,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67D5DEFE2457DB2F00759180 /* Build configuration list for PBXNativeTarget "ShapeShiftTests" */;
 			buildPhases = (
+				66F71F7A36F75D473CB84363 /* [CP] Check Pods Manifest.lock */,
 				67D5DEE32457DB2F00759180 /* Sources */,
 				67D5DEE42457DB2F00759180 /* Frameworks */,
 				67D5DEE52457DB2F00759180 /* Resources */,
@@ -368,9 +395,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67D5DF012457DB2F00759180 /* Build configuration list for PBXNativeTarget "ShapeShiftUITests" */;
 			buildPhases = (
+				19414BE0215C44EAE4828203 /* [CP] Check Pods Manifest.lock */,
 				67D5DEEE2457DB2F00759180 /* Sources */,
 				67D5DEEF2457DB2F00759180 /* Frameworks */,
 				67D5DEF02457DB2F00759180 /* Resources */,
+				077352F9735020287B8FF8B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -458,6 +487,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		077352F9735020287B8FF8B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeShift-ShapeShiftUITests/Pods-ShapeShift-ShapeShiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeShift-ShapeShiftUITests/Pods-ShapeShift-ShapeShiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShapeShift-ShapeShiftUITests/Pods-ShapeShift-ShapeShiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19414BE0215C44EAE4828203 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeShift-ShapeShiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66F71F7A36F75D473CB84363 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeShiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94D9F830C7911547C327A481 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeShift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B29AAB1501CF9DAEB4993FA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeShift/Pods-ShapeShift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeShift/Pods-ShapeShift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShapeShift/Pods-ShapeShift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67D5DECB2457DB2B00759180 /* Sources */ = {
@@ -661,6 +793,7 @@
 		};
 		67D5DEFC2457DB2F00759180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5BD57FE6BDA846AC14BD44A /* Pods-ShapeShift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -679,6 +812,7 @@
 		};
 		67D5DEFD2457DB2F00759180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E10902AEDFBE7CEFAB0C707 /* Pods-ShapeShift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -697,6 +831,7 @@
 		};
 		67D5DEFF2457DB2F00759180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401D6F4A1FEEA3D52D92F527 /* Pods-ShapeShiftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,6 +854,7 @@
 		};
 		67D5DF002457DB2F00759180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEA92062F26F01687AC14D7 /* Pods-ShapeShiftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -741,6 +877,7 @@
 		};
 		67D5DF022457DB2F00759180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80B7660B878A8D3E3BE1B44A /* Pods-ShapeShift-ShapeShiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -761,6 +898,7 @@
 		};
 		67D5DF032457DB2F00759180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD5FF345AC3FFE544E1B12B /* Pods-ShapeShift-ShapeShiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

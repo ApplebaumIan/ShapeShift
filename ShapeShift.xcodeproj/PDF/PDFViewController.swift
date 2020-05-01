@@ -8,7 +8,6 @@
 
 import UIKit
 import PDFKit
-import Vision
 class PDFViewController: UIViewController, PDFViewDelegate {
 	let pdfView = MainPDFView()
 	var pdf : Document?
@@ -89,12 +88,15 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		
 //	topBar = view.addTopBar()
 //    super.viewDidLoad()
+		self.title = self.pdf?.fileURL.lastPathComponent
 		PDFSetUp()
 		setUpMarkupTools()
 		let toolBar = UIToolbar()
-		let barItem = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(close))
+		let barItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(save))
+
 		barItem.tintColor = .systemYellow
 		toolBar.setItems([barItem], animated: true)
+//		navigationItem.rightBarButtonItem = barItem
 		view.addSubview(toolBar)
 		toolBar.translatesAutoresizingMaskIntoConstraints = false
 		toolBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -104,7 +106,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 					 }) { (isSuccess) in
 					
 					 }
-		let backButton = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.done, target: self, action: Selector(("backButtonClicked")))
+//		let backButton = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.done, target: self, action: Selector(("backButtonClicked")))
 		 let buttonHolder = UIView()
 		 view.addSubview(buttonHolder)
 		 buttonHolder.translatesAutoresizingMaskIntoConstraints = false
@@ -116,9 +118,9 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		buttonHolder.backgroundColor = .clear
 		 buttonHolder.addSubview(markupButtons)
 //		closeButtonSetup()
-
-    }
-	@objc func close(){
+		topCoverSetup()
+    }  
+	@objc func save(){
 		if let pdf = pdf {
 			pdfView.document?.write(to: pdf.fileURL)
 		}
@@ -130,7 +132,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 	let imageView = UIImageView()
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-//		pdfDrawing.setup()
+		pdfDrawing.setup()
 		view.addSubview(imageView)
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -139,4 +141,22 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 		pdfDrawing.imageView = imageView
 	}
+		/// Adds a nice cover for devices with a notch
+		func topCoverSetup() {
+			let topCover = UIView()
+			let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+			let blurEffectView = UIVisualEffectView(effect: blurEffect)
+			blurEffectView.frame = topCover.bounds
+			blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+			topCover.addSubview(blurEffectView)
+	
+			view.addSubview(topCover)
+			topCover.translatesAutoresizingMaskIntoConstraints = false
+			topCover.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+			topCover.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+			topCover.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+			topCover.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+			let backgroundColoer : UIColor = .tertiarySystemBackground
+			topCover.backgroundColor = backgroundColoer.withAlphaComponent(0.50)
+		}
 }
