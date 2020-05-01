@@ -48,6 +48,9 @@ class DrawingRecognizer: UIGestureRecognizer {
 		if !(UIDevice.current.userInterfaceIdiom == .pad){
 			UserDefaults.standard.set(true, forKey: "Finger")
 		}
+		#if targetEnvironment(simulator)
+			UserDefaults.standard.set(true, forKey: "Finger")
+		#endif
 		if UserDefaults.standard.bool(forKey: "Finger") == true{
 			//needs to be optimized for panning and zooming gestures like two fingers etc.
 			drawWithFinger(touches, event)
