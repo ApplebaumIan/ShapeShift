@@ -8,14 +8,72 @@
 
 import UIKit
 import SwiftUI
-
+import AppleWelcomeScreen
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate,UINavigationControllerDelegate {
-    
+	  /// The configuration struct that configures the appearence of our welcome screen.
+		var welcomeScreenConfig = AWSConfigOptions()
+	
+		/// presents the welcome screen using our custom configuration.
+		@objc func showWelcomeScreen() {
+			  let vc = AWSViewController()
+			vc.configuration = self.welcomeScreenConfig
+			  self.present(vc, animated: true)
+		}
+	  /// Configures the welcome screen. Setting it's style, and content in `welcomeScreenConfig`.
+		fileprivate func welcomeScreenSetup() {
+			welcomeScreenConfig.appName = "ShapeShift"
+			welcomeScreenConfig.appDescription = "ShapeShift lets you convert your handwritting to text!"
+			welcomeScreenConfig.tintColor = .systemYellow
+	
+			var item1 = AWSItem()
+			if #available(iOS 13.0, *) {
+	
+				item1.image = UIImage(systemName: "pencil.and.outline")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
+			} else {
+				// Fallback on earlier versions
+			}
+			item1.title = "Handwritting Recognition"
+			item1.description = "Write stuff down, instantly converts to text."
+	
+//			var item2 = AWSItem()
+//			if #available(iOS 13.0, *) {
+//				item2.image = UIImage(systemName: "bubble.left.and.bubble.right.fill")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+//			} else {
+//				// Fallback on earlier versions
+//			}
+//			item2.title = "Messaging"
+//			item2.description = "Our chat feature lets you send messages to other iASL users using Sign Language instead of a keyboard."
+//
+//			var item3 = AWSItem()
+//			if #available(iOS 13.0, *) {
+//				item3.image = UIImage(systemName: "camera.on.rectangle.fill")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+//			} else {
+//				// Fallback on earlier versions
+//			}
+//			item3.title = "We need your help."
+//			item3.description = "We're working on supporting full American Sign Language words, and we need your help to train iASL. With your permission, we ask you to tap the train iASL button where you will be prompted with a video of the sign that you will perform and send to our server."
+	
+			welcomeScreenConfig.items = [item1 ]
+	
+			welcomeScreenConfig.continueButtonAction = {
+				defaults.set(true, forKey: "WelcomeVersion1.0.0")
+				self.dismiss(animated: true)
+			}
+		}
+	override func viewDidAppear(_ animated: Bool) {
+		if defaults.bool(forKey: "WelcomeVersion1.0.0") {
+							   return
+						   } else {
+							   self.showWelcomeScreen()
+		
+					}
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        welcomeScreenSetup()
         delegate = self
-        
+		
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
         
@@ -78,6 +136,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
                 let documentViewController = PDFViewController(pdf: document)
 				documentViewController.modalPresentationStyle = .fullScreen
                 self.present(documentViewController, animated: true, completion: nil)
+//
 //				self.navigationController?.pushViewController(documentViewController, animated: true)
 				
             } else {
