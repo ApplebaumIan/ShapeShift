@@ -115,6 +115,9 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		recognitionSwitch.onTintColor = .systemYellow
 		recognitionSwitch.tintColor = .systemYellow
 		let switchy = UIBarButtonItem(customView: recognitionSwitch)
+		if defaults.bool(forKey: "recognition") {
+			recognitionSwitch.setOn(true, animated: true)
+		}
 //		recognitionSwitch.target(forAction: #selector(stateChanged(switchState:)), withSender: self)
 		recognitionSwitch.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
 		let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
