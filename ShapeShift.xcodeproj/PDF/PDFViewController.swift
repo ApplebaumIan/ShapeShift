@@ -14,6 +14,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 	var markupButtons = UIStackView()
 	let closeButton = UIButton()
 	let sssharer = ScreenshotSharer()
+	let recognitionSwitch = UISwitch()
 	private let pdfDrawing = PDFDraw()
 	private let pdfDrawingToolsDel = PDFDrawingTools()
 	public init() {
@@ -54,6 +55,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: 0).isActive = true
 		pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
 		pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+		
 	}
 
 	fileprivate func PDFSetUp() {
@@ -63,24 +65,28 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 			pdfView.setPDF(fileURL: Bundle.main.bundleURL.appendingPathComponent("blank.pdf"))//sets the pdf of the view.
 		}
 		pdfView.delegate = self
-			//Drawing/annotation recognizer
-				let pdfDrawingGestureRecognizer = DrawingRecognizer()
-				pdfView.addGestureRecognizer(pdfDrawingGestureRecognizer)
-				pdfDrawingGestureRecognizer.drawingDelegate = pdfDrawing
-				pdfDrawing.pdfView = pdfView
-		//		snackbarSetup()
-				//test to show that the view is working!
-				//let brochure = BrochureDB()
-				//var brochures = brochure.getAll()
-				//let selectorGuide = brochure.getSelectorGuide()//brochures[13]//get the 36th brochure... btw this wont work unless all of the brochures are in the root of the documents directory... it's going to show up blank other wise. ~Ian
-				view.addSubview(pdfView)
+		//Drawing/annotation recognizer
+		let pdfDrawingGestureRecognizer = DrawingRecognizer()
+		pdfView.addGestureRecognizer(pdfDrawingGestureRecognizer)
+		pdfDrawingGestureRecognizer.drawingDelegate = pdfDrawing
+		pdfDrawing.pdfView = pdfView
+		view.addSubview(pdfView)
 		view.backgroundColor = .systemBackground
-				pdfViewConstraints()//constraints for pdfView
+		pdfViewConstraints()//constraints for pdfView
 		imageView.isHidden = true
 	}
 	
 
 
+	 @objc func switchStateDidChange(_ sender:UISwitch) {
+		if sender.isOn {
+			print("on")
+			defaults.set(true, forKey: "recognition")
+		} else {
+			print("off")
+			defaults.set(false, forKey: "recognition")
+		}
+	}
 	
 	let customSharer = ScreenshotViewController()
 	override func viewDidLoad() {
@@ -94,16 +100,25 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		setUpMarkupTools()
 		let toolBar = UIToolbar()
 		let barItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(save))
+		let title = UILabel()
+		title.text = pdf?.fileURL.lastPathComponent
+		
 		let label = UILabel()
-		label.text = pdf?.fileURL.lastPathComponent
+		label.text = "Recogniton  "
 //		label.center = CGPoint(x: CGRectGetMidX(view.frame), y: view.frame.height)
 //		label.textAlignment = NSTextAlignment.Center
 
-		let toolbarTitle = UIBarButtonItem(customView: label)
+		let toolbarTitle = UIBarButtonItem(customView: title)
+		let switchLabel = UIBarButtonItem(customView: label)
 //		titleItem.title = self.pdf?.fileURL.lastPathComponent
 		barItem.tintColor = .systemYellow
+		recognitionSwitch.onTintColor = .systemYellow
+		recognitionSwitch.tintColor = .systemYellow
+		let switchy = UIBarButtonItem(customView: recognitionSwitch)
+//		recognitionSwitch.target(forAction: #selector(stateChanged(switchState:)), withSender: self)
+		recognitionSwitch.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
 		let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-		toolBar.setItems([flexible,toolbarTitle,flexible,barItem], animated: true)
+		toolBar.setItems([switchLabel,switchy,flexible,toolbarTitle,flexible,barItem], animated: true)
 //		navigationItem.rightBarButtonItem = barItem
 		view.addSubview(toolBar)
 		toolBar.translatesAutoresizingMaskIntoConstraints = false
@@ -127,6 +142,7 @@ class PDFViewController: UIViewController, PDFViewDelegate {
 		 buttonHolder.addSubview(markupButtons)
 //		closeButtonSetup()
 		topCoverSetup()
+		
     }  
 	@objc func save(){
 		if let pdf = pdf {

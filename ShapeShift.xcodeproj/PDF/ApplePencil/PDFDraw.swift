@@ -124,10 +124,27 @@ extension PDFDraw: DrawingGestureRecognizerDelegate{
 		currentAnnotation = nil
 		createFinalAnnotation(path: path!, page: page)
 		currentAnnotation = nil
-		let ss = ScreenshotSharer()
-		imageView?.image = ss.takeImageOf(view: pdfView)
-		drawDoodlingRect(context: context)
-		resetDoodleRect()
+//		let ss = ScreenshotSharer()
+//		imageView?.image = ss.takeImageOf(view: pdfView)
+//		drawDoodlingRect(context: context)
+//		resetDoodleRect()
+		 let inset = 10
+				
+		//        markerColor.setStroke()
+		//        context!.setLineWidth(1.0)
+		//        context!.setLineCap(.round)
+				UIColor.clear.setFill()
+				
+				ocrImageRect = CGRect(x: minX - inset, y: minY - inset, width: (maxX-minX) + inset*2, height: (maxY-minY) + 2*inset)
+		//        context!.addRect(ocrImageRect!)
+		//        context!.strokePath()
+				
+		//        drawTextRect(context: context, rect: ocrImageRect!)
+		if defaults.bool(forKey: "recognition"){
+			let ss = ScreenshotSharer()
+			imageView?.image = ss.takeImageOf(view: pdfView)
+			fetchOCRText(page: page)
+		}
 	}
 	private func createFinalAnnotation(path: UIBezierPath, page: PDFPage) -> PDFAnnotation {
 		let border = PDFBorder()

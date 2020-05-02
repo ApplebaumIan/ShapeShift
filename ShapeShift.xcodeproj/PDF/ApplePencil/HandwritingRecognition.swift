@@ -23,7 +23,7 @@ extension PDFDraw{
                 let now = Date().timeIntervalSince1970
                 
                 if Int(self.lastTouchTimestamp!) > 0 && now - self.lastTouchTimestamp! > 1 {
-                    self.drawDoodlingRect(context: self.context)
+//                    self.drawDoodlingRect(context: self.context)
                 }
             })
         } else {}
@@ -41,26 +41,11 @@ extension PDFDraw{
 		UIGraphicsBeginImageContextWithOptions(self.pdfView.bounds.size, false, 0.0)
 		   context = UIGraphicsGetCurrentContext()
 	   }
-	func drawDoodlingRect(context: CGContext?) {
-        let inset = 10
-        
-//        markerColor.setStroke()
-        context!.setLineWidth(1.0)
-        context!.setLineCap(.round)
-        UIColor.clear.setFill()
-        
-        ocrImageRect = CGRect(x: minX - inset, y: minY - inset, width: (maxX-minX) + inset*2, height: (maxY-minY) + 2*inset)
-        context!.addRect(ocrImageRect!)
-        context!.strokePath()
-        
-        drawTextRect(context: context, rect: ocrImageRect!)
-        let ss = ScreenshotSharer()
-		imageView?.image = ss.takeImageOf(view: pdfView)
-        
-        fetchOCRText()
-        
-        resetDoodleRect()
-    }
+//	func drawDoodlingRect(context: CGContext?) {
+//
+//
+//        resetDoodleRect()
+//    }
 
     func drawTextRect(context: CGContext?, rect: CGRect) {
         UIColor.lightGray.setStroke()
@@ -68,11 +53,11 @@ extension PDFDraw{
         context!.addRect(currentTextRect!)
         context!.strokePath()
     }
-	func fetchOCRText () {
-        let manager = CognitiveServices()
-        
+	func fetchOCRText (page: PDFPage){
+//        let manager = CognitiveServices()
+        let inset = 10
 		let ocrImage = imageView!.image!.crop(rect: ocrImageRect!)
-        
+        let postition = pdfView.convert(CGPoint(x: minX-inset, y: minY-inset), to: page)
 //        manager.retrieveTextOnImage(ocrImage) {
 //            operationURL, error in
 //
@@ -104,10 +89,22 @@ extension PDFDraw{
 //            }
 //        }
 		let swiftOCRInstance = SwiftOCR()
-		
+//		var string : String = "BOOP"
 		swiftOCRInstance.recognize(ocrImage) { recognizedString in
 			print("\(recognizedString)")
+//			string = recognizedString
+			
+			DispatchQueue.main.async {
+				if recognizedString != ""{
+					self.undo()
+					self.addText(text: recognizedString, page: (self.pdfView
+						.document?.page(at: 0))!, position: postition)
+					print(CGPoint(x: self.minX-inset, y: self.minY-inset))
+				}
+					
+				}
 		}
+//		return string
     }
 	public func retrieveTextOnImage(_ image: UIImage, completion: @escaping (String?, NSError?) -> ()) {
         
@@ -161,6 +158,17 @@ extension PDFDraw{
 			self.pdfView.addSubview(label)
         }
     }
+	func addText(text: String, page:PDFPage, position: CGPoint) {
+	  guard let document = pdfView.document else { return }
+//	  let lastPage = document.page(at: document.pageCount - 1)
+		let rect = CGRect(origin: position, size: CGSize(width: 100, height: 20))
+	  let annotation = PDFAnnotation(bounds: rect, forType: .freeText, withProperties: nil)
+	  annotation.contents = "\(text)"
+	  annotation.font = UIFont.systemFont(ofSize: 15.0)
+	  annotation.fontColor = .blue
+	  annotation.color = .clear
+	  page.addAnnotation(annotation)
+	}
 }
 
 extension UIImage {
