@@ -22,7 +22,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
 	  /// Configures the welcome screen. Setting it's style, and content in `welcomeScreenConfig`.
 		fileprivate func welcomeScreenSetup() {
 			welcomeScreenConfig.appName = "ShapeShift"
-			welcomeScreenConfig.appDescription = "ShapeShift lets you convert your handwritting to text!"
+			welcomeScreenConfig.appDescription = "ShapeShift lets you convert your hand writing into text and save it within the original PDF!"
 			welcomeScreenConfig.tintColor = .systemYellow
 	
 			var item1 = AWSItem()
@@ -34,24 +34,25 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
 			}
 			item1.title = "Handwritting Recognition"
 			item1.description = "Write stuff down, instantly converts to text."
+			
 	
-//			var item2 = AWSItem()
-//			if #available(iOS 13.0, *) {
-//				item2.image = UIImage(systemName: "bubble.left.and.bubble.right.fill")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
-//			} else {
-//				// Fallback on earlier versions
-//			}
-//			item2.title = "Messaging"
-//			item2.description = "Our chat feature lets you send messages to other iASL users using Sign Language instead of a keyboard."
+			var item2 = AWSItem()
+			if #available(iOS 13.0, *) {
+				item2.image = UIImage(systemName: "doc.append")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
+			} else {
+				// Fallback on earlier versions
+			}
+			item2.title = "Annotations"
+			item2.description = "ShapeShift uses standard PDF annotations so you can view your drawings anywhere."
 //
-//			var item3 = AWSItem()
-//			if #available(iOS 13.0, *) {
-//				item3.image = UIImage(systemName: "camera.on.rectangle.fill")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
-//			} else {
-//				// Fallback on earlier versions
-//			}
-//			item3.title = "We need your help."
-//			item3.description = "We're working on supporting full American Sign Language words, and we need your help to train iASL. With your permission, we ask you to tap the train iASL button where you will be prompted with a video of the sign that you will perform and send to our server."
+			var item3 = AWSItem()
+			if #available(iOS 13.0, *) {
+				item3.image = UIImage(systemName: "folder.fill")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+			} else {
+				// Fallback on earlier versions
+			}
+			item3.title = "Familiar File Management"
+			item3.description = "Using the Apple Files App you can import any PDF you choose, and move them to where you want"
 	
 			welcomeScreenConfig.items = [item1 ]
 	
