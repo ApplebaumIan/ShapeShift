@@ -1,0 +1,6 @@
+framework module Pods_ShapeShiftTests {
+  umbrella header "Pods-ShapeShiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

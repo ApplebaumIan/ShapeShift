@@ -1,0 +1,37 @@
+PODS:
+  - AppleWelcomeScreen (1.0.2):
+    - SnapKit
+  - GPUImage (0.1.7)
+  - SnapKit (5.0.1)
+  - SwiftOCR (1.1):
+    - GPUImage
+
+DEPENDENCIES:
+  - AppleWelcomeScreen
+  - SwiftOCR (from `https://github.com/joeboyscout04/SwiftOCR.git`, branch `update-pod-swift-version`)
+
+SPEC REPOS:
+  trunk:
+    - AppleWelcomeScreen
+    - GPUImage
+    - SnapKit
+
+EXTERNAL SOURCES:
+  SwiftOCR:
+    :branch: update-pod-swift-version
+    :git: https://github.com/joeboyscout04/SwiftOCR.git
+
+CHECKOUT OPTIONS:
+  SwiftOCR:
+    :commit: 9690ef9030739256c7cb044a19d4d87cde8a7566
+    :git: https://github.com/joeboyscout04/SwiftOCR.git
+
+SPEC CHECKSUMS:
+  AppleWelcomeScreen: 92fb44fc457df8fdc2af00e29546ef280571611f
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftOCR: 6f93457b543e50fc64c19a1ff5164bd9f8b9fc02
+
+PODFILE CHECKSUM: 693b615c7915534495044a8317d173b0d5b58eec
+
+COCOAPODS: 1.9.1

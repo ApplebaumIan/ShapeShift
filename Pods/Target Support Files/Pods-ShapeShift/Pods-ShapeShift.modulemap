@@ -1,0 +1,6 @@
+framework module Pods_ShapeShift {
+  umbrella header "Pods-ShapeShift-umbrella.h"
+
+  export *
+  module * { export * }
+}
