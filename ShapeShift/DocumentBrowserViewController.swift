@@ -47,14 +47,14 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
 //
 			var item3 = AWSItem()
 			if #available(iOS 13.0, *) {
-				item3.image = UIImage(systemName: "folder.fill")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+				item3.image = UIImage(systemName: "folder.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
 			} else {
 				// Fallback on earlier versions
 			}
 			item3.title = "Familiar File Management"
 			item3.description = "Using the Apple Files App you can import any PDF you choose, and move them to where you want"
 	
-			welcomeScreenConfig.items = [item1 ]
+			welcomeScreenConfig.items = [item1, item2,item3 ]
 	
 			welcomeScreenConfig.continueButtonAction = {
 				defaults.set(true, forKey: "WelcomeVersion1.0.0")
